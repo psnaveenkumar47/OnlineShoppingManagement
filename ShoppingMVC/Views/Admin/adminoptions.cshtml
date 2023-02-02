@@ -1,0 +1,14 @@
+﻿<link rel="stylesheet" href="~/css/button.css"/>
+@{
+    ViewData["Title"] = "adminoptions";
+}
+
+<h1>adminoptions</h1>
+
+
+<div class="button_container">
+    <a asp-controller="User" asp-action="UserOperations"  class="btn"><span>Get Users Data</span></a><br> <br> 
+     <a asp-controller="Admin" asp-action="adminoperations"  class="btn"><span>   Get Admin Data</span></a><br> <br> 
+     <a asp-controller="Product" asp-action="create" class="btn"> <span>  Add Product</span></a><br> <br> 
+     <a asp-controller="Product" asp-action="delete" class="btn"> <span>  Delete Product</span></a><br> <br> 
+</div>

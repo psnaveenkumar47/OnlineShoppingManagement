@@ -1,0 +1,17 @@
+﻿<link rel="stylesheet" href="~/css/button.css"/>
+@{
+    ViewData["Title"] = "Login Options";
+}
+<div class="button_container">
+  <p class="description">Select Type Of Login</p>
+   <a  asp-controller="User" asp-action="UserLogin" class="btn"><span>User Login</span></a><br> <br> 
+    <a asp-controller="Home" asp-action="AdminLogin" class="btn"><span>Admin Login</span></a><br> <br> 
+</div>
+
+<!--
+<h1 align="center">Select Type Of Login</h1>
+<div>
+    <a  asp-controller="Home" asp-action="UserLogin" class="learn-more">User Login</a><br> <br> 
+     <a asp-controller="Home" asp-action="AdminLogin" class="learn-more">Admin Login</a><br> <br> 
+</div>
+-->

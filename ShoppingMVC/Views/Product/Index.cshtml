@@ -1,0 +1,105 @@
+﻿@model IEnumerable<ShoppingMVC.Models.ProductData>
+
+@{
+    ViewData["Title"] = "Index";
+    string Image(ProductData productdata)
+    {
+        if(productdata.ProductImg1!="")
+        {
+            return "fa-solid fa-check";
+        }
+        else
+        {
+            return "fa-solid fa-x";
+        }
+    }
+}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+
+.bg-img {
+  /* The image used */
+  background-image: url("Image/bg2.jpg");
+
+  height:100px;
+  width:100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  /* Needed to position the navbar */
+  position: relative;
+}
+
+/* Position the navbar container inside the image */
+.container {
+  position: absolute;
+  right:0;
+  margin: 20px;
+  width: auto;
+}
+
+/* The navbar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  padding-top:10px;
+  padding-bottom:30px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: white;
+  color: black;
+}
+</style>
+
+
+<div class="bg-img">
+    <center>
+      <img src="~/Image/logo.jpg" height="70px;" style="border-radius:40%;"/>
+      </center>
+         <a asp-controller="Home" asp-action="LoginOption" class="btn btn-light" >  Login </a>
+    <a asp-controller="Home" asp-action="CreateOption" class="btn btn-light">  Register </a>
+    <a asp-controller="Admin" asp-action="adminoptions" class="btn btn-light" >Get  Data</a>
+  <div class="container">      
+    <div class="topnav"> 
+      
+ 
+   
+  </div>
+ </div>
+ </div>
+<div class="row">
+    @foreach(var item in Model)
+    {
+        <div class="col-3">
+            <div class="card my-2 product-cards">
+                <a class="a-cleanup" asp-controller="Product" asp-action="Details" asp-route-id="@item.ProductID">
+                    <img src="@item.ProductImg1" class="card-img-top card-img" >
+                    <div class="card-body" style="height:6em;">
+                        <h5 class="mb-3">@item.ProductName</h5>
+
+                    </div>
+                    <div class="card-body">
+                        <span class="card-text">@item.ProductPrice.ToString("c")</span>
+                       
+                    </div>
+                </a>
+                   
+
+            </div>
+        </div>
+    }
+</div>

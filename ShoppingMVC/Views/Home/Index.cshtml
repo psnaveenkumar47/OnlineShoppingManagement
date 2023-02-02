@@ -1,0 +1,62 @@
+﻿@model IEnumerable<ShoppingMVC.Models.ProductData>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<!--
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+-->
+
+<body >
+<table class="table" >
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductImg1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryID)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductPrice)
+            </td>
+            <td>
+                <img src="~/Image/pant1.jpg"height="100px"width="100px"/>
+            </td>
+            <td>
+                
+                @Html.ActionLink("Details", "Details", new { id=item.ProductID}) |
+               
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+</body>

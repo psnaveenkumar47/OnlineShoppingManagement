@@ -1,0 +1,9 @@
+﻿<link rel="stylesheet" href="~/css/button.css"/>
+@{
+    ViewData["Title"] = "Login Options";
+}
+<div class="button_container">
+  <p class="description">Select Type Of Registration</p>
+   <a  asp-controller="User" asp-action="create" class="btn"><span>User Registration</span></a><br> <br> 
+    <a asp-controller="Admin" asp-action="create" class="btn"><span>Admin Registration</span></a><br> <br> 
+</div>

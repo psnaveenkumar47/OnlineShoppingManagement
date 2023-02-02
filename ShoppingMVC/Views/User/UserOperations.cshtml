@@ -1,0 +1,23 @@
+﻿<link rel="stylesheet" href="~/css/button.css"/>
+@model IEnumerable<ShoppingMVC.Models.UserData>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>User Operations </h1>
+<div  class="button_container">
+    <a asp-controller="User" asp-action="Index" class="btn"><span> Get  All Users Data</span></a><br> <br>   <hr/>    
+     <input type="number"  class="center-block" placeholder="UserID" name="getuserid" id="getuserid"><br>
+     <a asp-controller="User" asp-action="GetUserByFname"  class="btn"><span>   Get User By ID</span></span></a><br> <br>
+     <input type="text"  class="center-block" placeholder="User First Name" name="getfirstname" ><br>
+     <a asp-controller="User" asp-action="GetUserByFname"  class="btn"><span>   Get User By First Name</span></a><br> <br>
+     <input type="text"   class="center-block" placeholder="User Last Name" name="getlastname" ><br>
+     <a asp-controller="User" asp-action="Useroperations"  class="btn"><span>   Get User By Last Name</span></a><br> <br> 
+     <input type="text"  class="center-block" placeholder="User Email" name="getemail" ><br>
+     <a asp-controller="User" asp-action="Useroperations"  class="btn"><span>   Get User Email</span></a><br> <br> 
+     <input type="number"  class="center-block" placeholder="User Mobile Number" name="getmobilenumber" ><br>
+     <a asp-controller="User" asp-action="Useroperations"  class="btn"><span>   Get User Mobile Number</span></a><br> <br> 
+     <input type="text"  class="center-block" placeholder="User Username" name="getusernamename" ><br>
+     <a asp-controller="User" asp-action="Useroperations"  class="btn"><span>   Get User Username</span></a><br> <br> 
+</div>

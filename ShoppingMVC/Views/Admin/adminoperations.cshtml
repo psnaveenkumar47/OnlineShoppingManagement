@@ -1,0 +1,24 @@
+﻿<link rel="stylesheet" href="~/css/button.css"/>
+@model IEnumerable<ShoppingMVC.Models.AdminData>
+@{
+    ViewData["Title"] = "adminoperations";
+}
+
+<h1>Admin Operations</h1>
+<hr/>
+
+<div class="button_container">
+    <a asp-controller="Admin" asp-action="Index" class=" btn btn-outline-primary"><span> Get Admin Data</span></a><br /> <br /><hr/>
+     <input type="number" class="center-block"  placeholder="AdminID" name="getadminid" ><br>
+     <a asp-controller="Admin" asp-action="controllermethod" class="btn"><span>   Get Admin By ID</span></a><br> <br> 
+     <input type="text"class="center-block"  placeholder="Admin First Name" name="getfirstname" ><br> 
+     <a asp-controller="Admin" asp-action="adminoperations" class="btn"><span>   Get Admin By First Name</span></a><br> <br> 
+     <input type="text"class="center-block" placeholder="Admin Last Name" name="getlastname" ><br> 
+     <a asp-controller="Admin" asp-action="adminoperations" class="btn"><span>   Get Admin By Last Name</span></a><br> <br>
+     <input type="text" class="center-block"  placeholder="Admin Email" name="getemail" ><br>
+     <a asp-controller="Admin" asp-action="adminoperations" class="btn"><span>   Get Admin Email</span></a><br> <br> 
+     <input type="number" class="center-block"  placeholder="Admin Mobile Number" name="getbymobile" ><br> 
+     <a asp-controller="Admin" asp-action="adminoperations" class="btn"><span>   Get Admin Mobile Number</span></a><br> <br>
+     <input type="text" class="center-block"  placeholder="Admin Username" name="getusername" ><br> 
+     <a asp-controller="Admin" asp-action="adminoperations" class="btn"><span>   Get Admin Username</span></a><br> <br> 
+</div>
